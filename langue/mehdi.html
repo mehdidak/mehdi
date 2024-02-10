@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>stoor mehdi</title>
+        <link rel="stylesheet" href="mehdi.css">
+        
+    </head>
+    <body>
+        <style>
+            *{
+                margin:0;padding:0;
+                box-sizing:border-box;
+
+            }
+            body{
+                  display: flex; 
+                  align-items:center;
+                  justify-content:center;
+
+            }
+            div{
+                  display: flex; flex-wrap:wrap;
+                  width:400px;
+                  height:500px;
+
+            }
+            h1{
+                  width:400px;
+                  display:flex;
+                  align-items:center;
+                  justify-content:center;
+                  background:linear-gradient(90deg,purple,orangered,black);
+                  -webkit-background-clip:text;
+                  -webkit-text-fill-color:transparent;
+                  font-family: cursive;
+
+            }
+            textarea{
+                width:400px;
+                margin-top:30px;
+                height:200px;outline:none;
+
+
+            }
+            select{
+                margin-left:150px;
+                width:90px;height:24px;
+                border-radius:9px;
+                outline: none;
+                background-color:orangered;
+            }
+           button{
+            width:180px;
+            height:30px;
+            border-radius:12px;
+            margin-left:110px;
+            background:linear-gradient(90deg,orangered,black,purple);
+            color:white;
+
+
+}
+        </style>
+       <div class="one">
+        <h1> convertir text to speech</h1>
+        <select>
+            <option value="ar-AR">arabe</option>
+            <option value="fr-FR">france</option>
+            <option value="en-EN">english</option>
+            
+        </select>
+        <textarea id="text" placeholder="text"></textarea>
+        <button onclick="speak()">speak</button>
+       </div>
+       <script>
+        let ul=document.querySelector("select");
+        console.log(ul);
+        ul.onchange=()=>{
+
+    
+             console.log(ul.value);
+             window.sessionStorage.setItem("lang",ul.value);
+
+           }
+        
+       </script>
+    </body>
+</html>
